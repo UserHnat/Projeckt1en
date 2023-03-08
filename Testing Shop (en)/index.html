@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site Man002 - Main Page</title>
+    <meta charset="UTF-8"/>
+    <style>/* CSS */
+
+BUTTON {
+  background-color: #4CAF51; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+BUTTON:hover {
+  transition-duration: 0.9s;
+  background-color: red;
+  color: black;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+</head>
+<body>
+
+<Script>
+    function checkboxA(){
+        //alert ('Без цегли будинок не зробиш');
+        var allTr = document.getElementsByTagName('table')[0].getElementsByTagName('tr');
+        var i=1;
+        while( i < allTr.length) {
+            var mytr = allTr[i];
+            mytr.getElementsByTagName('td')[4].getElementsByTagName('input')[0].checked=true;
+            //alert(  );
+            i=i+1;
+        }
+
+    }
+
+    function abc(){
+       alert ('Без цегли будинок не зробиш');
+       var ab = document.getElementsByTagName('table')[0].getElementsByTagName('tr');
+       var i=1;
+       while( i < ab.length) {
+            var mip = ab[i];
+            if( mip.getElementsByTagName('td')[4].getElementsByTagName('input')[0].checked ) {
+                alert( mip.getElementsByTagName('td')[2].getElementsByTagName('input')[0].value );
+            }
+            i=i+1;
+      }
+    }
+</script>
+
+<h1>!!!ONLY MAIN PAGE TRANSLATED!!!</h1>
+
+<h1>Welcome to the site of the man's002 store in Minecraft!</h1>
+
+<h4>This is a wood shop in minecraft. All the goods that man002 brings from the sawmill are sold here. Some logs, namely those that are not sold, he carries to the warehouse or melts into charcoal. this site is under development, so there are bugs and non-working buttons.</h4>
+
+<div id="buttonsSpan1" style="text-align: center;">
+
+    <button onclick="document.location='http://localhost:63342/Testing%20Shop/%D0%9A%D0%BE%D1%88%D0%B8%D0%BA.html?_ijt=fgbt7opcm5okcgbrm3cct7c09u&_ij_reload=RELOAD_ON_SAVE'">Basket</button>
+
+    <button onclick="calculate();">calculate amount</button>
+
+    <button onclick="calculatePrice();">Calculate the price</button>
+
+    <button onclick="document.getElementById('question1').style.display='BLOCK';">buy</button>
+
+    <button>Register</button>
+
+    <button onclick="">Use a promotional code</button>
+
+    <button onclick="document.location='https://discord.gg/hzGAXFXcNp'">Discord</button>
+
+    <button onclick="document.location='http://localhost:63342/Testing%20Shop/%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD.html?_ijt=fgbt7opcm5okcgbrm3cct7c09u&_ij_reload=RELOAD_ON_SAVE'">shop</button>
+
+    <!--<button onclick="abc();">11</button>-->
+
+</div>
+
+<img src="Foto2.2.png" style="width:1890px;height:690px;">
+
+<h2>Trades</h2>
+
+<table id="tblID">
+<tr>
+    <th style="width:3px">Foto</th>
+    <th>Item</th>
+    <th>Amount</th>
+    <th>Cost</th>
+    <th style="width:3px">In basket</th>>
+</tr>
+<tr id="Смерекова колода">
+    <td><img src="Smereka.png" width="60">
+    <td>spruce log</td>
+    <td name="amount"><input type="number" id="quantity5" name="quantity" min="32" max="256" value="32" step="32"></input></td>
+    <td><value>3</value> Diamonds</td>
+    <td><input type="checkbox"/></td>
+</tr>
+
+<tr>
+    <td><img src="Dub.png" width="60"></td>
+    <td>Oak log</td>
+    <td name="amount"><input type="number" id="quantity4" name="quantity" min="16" max="256" value="16" step="16"></input></td>
+    <td><price>5</price> Diamonds</td>
+    <td><input type="checkbox"/></td>
+</tr>
+<tr>
+    <td><img src="Bereza.png" width="60"></td>
+    <td>Ugly Birch Log</td>
+    <td name="amount"><input type="number" id="quantity3" name="quantity" min="16" max="128" value="16" step="16"></input></td>
+    <td><price>5</price> Diamonds</td>
+    <td><input type="checkbox"/></td>
+</tr>
+<tr id="Деревне Вугілля">
+    <td><img src="vuhilla.png" width="60">
+    <td>charcoal</td>
+    <td name="amount"><input type="number" id="quantity2" name="quantity" min="16" max="128" value="16" step="16"></input></td>
+    <td><price>3</price></td>
+    <td><input type="checkbox"/></td>
+</tr>
+<tr id="Вугілля">
+    <td><img src="vunila2.png" width="60">
+    <td>Coal</td>
+    <td name="amount"><input type="number" id="quantity1" name="quantity" min="16" max="128" value="16" step="16"></input></td>
+    <td><price>4</price> Diamonds</td>
+    <td><input type="checkbox"/></td>
+</tr>
+</table>
+
+
+</body>
+</html>

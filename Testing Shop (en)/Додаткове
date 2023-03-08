@@ -1,0 +1,96 @@
+<script>
+/*
+<div id="question1" style="position: relative; display: none;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73AD21;
+ top:-400px;
+ left: 550px;
+background-color:gray;
+border-top-width: 5px; border-right-width: 5px; border-style: solid; border-color: black;
+font-size: 30px; font-family: Arial; margin: 11px; padding: 50px;">
+    Ваш нік?
+
+    <input />
+    <button onclick="document.getElementById('question1').style.display='none';">OK</button>
+function calculatePrice() {
+
+    /* alert('вибачте, ще не готово...');
+*/
+
+   try {
+    var allCheckboxes = document.getElementsByTagName('input');
+    var somethingIsChecked = false;
+
+    var totalAmount = 0;
+
+    for (var i = 0; i < allCheckboxes.length; i++){
+        var curCheckbox = allCheckboxes[i];
+        if (curCheckbox!=null && curCheckbox.checked){
+            somethingIsChecked = true;
+            //alert('this checkboc is checked '+curCheckbox.parentElement.parentElement.getElementsByTagName('price').length);
+            if(curCheckbox.parentElement!=null && curCheckbox.parentElement.parentElement!=null && curCheckbox.parentElement.parentElement.getElementsByTagName('price').length>0) {
+
+                var amount = curCheckbox.parentElement.parentElement.getElementsByTagName('price')[0].innerText;
+                totalAmount = totalAmount + parseInt(amount, 10);
+            }
+
+        }
+    }
+    alert('total amount='+totalAmount);
+
+ } catch(exception) {
+    alert('Помилка '+ exception.message);
+ }
+ if(somethingIsChecked==false) {
+    alert('виберіть хоч один товар');
+ }
+
+}
+
+
+
+function calculate() {
+    /* alert('вибачте, ще не готово...');
+*/
+
+   try {
+    var allCheckboxes = document.getElementsByTagName('input');
+    var somethingIsChecked = false;
+
+    var totalAmount = 0;
+
+    for (var i = 0; i < allCheckboxes.length; i++){
+        var curCheckbox = allCheckboxes[i];
+        if (curCheckbox!=null && curCheckbox.checked){
+            somethingIsChecked = true;
+            //alert('this checkboc is checked '+curCheckbox.parentElement.parentElement.id);
+            if(curCheckbox.parentElement!=null && curCheckbox.parentElement.parentElement!=null && curCheckbox.parentElement.parentElement.getElementsByTagName('td').length>0) {
+                var amount = curCheckbox.parentElement.parentElement.getElementsByTagName('td')[1].innerText;
+                totalAmount = totalAmount + parseInt(amount, 10);
+            }
+
+        }
+    }
+    alert('total amount='+totalAmount);
+
+ } catch(exception) {
+    alert('Помилка '+ exception.message);
+ }
+ if(somethingIsChecked==false) {
+    alert('виберіть хоч щось');
+ }
+
+}
+
+
+function checkedAllHHHH(allCheckbox){
+  var allCheckboxes = document.getElementsByTagName('input');
+  for (var i = 0; i < allCheckboxes.length; i++){
+    var curCheckbox = allCheckboxes[i];
+    if (curCheckbox.id != 'all'){
+      curCheckbox.checked = allCheckbox.checked;
+    }
+  }
+}
+</script>

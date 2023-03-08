@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сайт man002 - Торги</title>
+
+  <style>/* CSS */
+  BUTTON {
+  background-color: #4CAF51; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  }
+
+  BUTTON:hover {
+  transition-duration: 0.9s;
+  background-color: red;
+  color: black;
+  }
+
+  table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  }
+
+  td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  }
+
+  tr:nth-child(even) {
+  background-color: #dddddd;
+  }
+  </style>
+
+</head>
+<body>
+
+<Script>
+    function checkboxA(){
+        //alert ('Без цегли будинок не зробиш');
+        var allTr = document.getElementsByTagName('table')[0].getElementsByTagName('tr');
+        var i=1;
+        while( i < allTr.length) {
+            var mytr = allTr[i];
+            mytr.getElementsByTagName('td')[4].getElementsByTagName('input')[0].checked=true;
+            //alert(  );
+            i=i+1;
+        }
+
+    }
+
+    function abc(){
+       alert ('Без цегли будинок не зробиш');
+       var ab = document.getElementsByTagName('table')[0].getElementsByTagName('tr');
+       var i=1;
+       while( i < ab.length) {
+            var mip = ab[i];
+            if( mip.getElementsByTagName('td')[4].getElementsByTagName('input')[0].checked ) {
+                alert( mip.getElementsByTagName('td')[2].getElementsByTagName('input')[0].value );
+            }
+            i=i+1;
+      }
+    }
+</script>
+
+<h2>Торги</h2>
+
+<div id="buttonsSpan1" style="text-align: center;">
+
+  <button onclick="document.location='http://localhost:63342/Testing%20Shop/%D0%9A%D0%BE%D1%88%D0%B8%D0%BA.html?_ijt=fgbt7opcm5okcgbrm3cct7c09u&_ij_reload=RELOAD_ON_SAVE'">Кошик</button>
+
+  <button onclick="calculate();">Підрахувати кількість</button>
+
+  <button onclick="calculatePrice();">Підрахувати ціну</button>
+
+  <button onclick="document.getElementById('question1').style.display='BLOCK';">Купити</button>
+
+  <button onclick="checkboxA();">Вибрати Усе</button>
+
+  <button>Зайререструватися</button>
+
+  <button onclick="">Використати акційний код</button>
+
+  <button onclick="document.location='https://discord.gg/AVKSbm8F'">Discord</button>
+
+  <!--<button onclick="abc();">11</button>-->
+</div>
+
+<table id="tblID">
+  <tr>
+    <th style="width:3px">Фото</th>
+    <th>Предмет</th>
+    <th>Кількість</th>
+    <th>Ціна</th>
+    <th style="width:3px">У кошик</th>>
+  </tr>
+  <tr id="Смерекова колода">
+    <td><img src="Smereka.png" width="60">
+    <td>Смерекова колода </td>
+    <td name="amount"><input type="number" id="quantity5" name="quantity" min="32" max="256" value="32" step="32"></input></td>
+    <td><price>3</price> Діаманти</td>
+    <td><input type="checkbox"/></td>
+  </tr>
+
+  <tr>
+    <td><img src="Dub.png" width="60"></td>
+    <td>Дубова Колода</td>
+    <td name="amount"><input type="number" id="quantity4" name="quantity" min="16" max="256" value="16" step="16"></input></td>
+    <td><price>5</price> Діаманти</td>
+    <td><input type="checkbox"/></td>
+  </tr>
+  <tr>
+    <td><img src="Bereza.png" width="60"></td>
+    <td>Березова Колода</td>
+    <td name="amount"><input type="number" id="quantity3" name="quantity" min="16" max="128" value="16" step="16"></input></td>
+    <td><price>5</price> Діаманти</td>
+    <td><input type="checkbox"/></td>
+  </tr>
+  <tr id="Деревне Вугілля">
+    <td><img src="vuhilla.png" width="60">
+    <td>Деревне Вугілля </td>
+    <td name="amount"><input type="number" id="quantity2" name="quantity" min="16" max="128" value="16" step="16"></input></td>
+    <td><price>3</price> діаманти</td>
+    <td><input type="checkbox"/></td>
+  </tr>
+  <tr id="Вугілля">
+    <td><img src="vunila2.png" width="60">
+    <td>Вугілля </td>
+    <td name="amount"><input type="number" id="quantity1" name="quantity" min="16" max="128" value="16" step="16"></input></td>
+    <td><price>4</price> діаманти</td>
+    <td><input type="checkbox"/></td>
+  </tr>
+</table>
+</body>
+</html>
